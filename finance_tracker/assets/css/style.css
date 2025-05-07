@@ -1,0 +1,188 @@
+/* Custom Styles for Finance Tracker */
+
+/* Main Color Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --income-color: #2ecc71;
+    --expense-color: #e74c3c;
+    --warning-color: #f39c12;
+}
+
+/* Body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make footer stick to bottom */
+footer {
+    margin-top: auto;
+}
+
+/* Dashboard Cards */
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-income {
+    border-left: 4px solid var(--income-color);
+}
+
+.card-expense {
+    border-left: 4px solid var(--expense-color);
+}
+
+.card-balance {
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Progress Bars */
+.progress {
+    height: 10px;
+    margin-bottom: 10px;
+}
+
+.progress-bar-success {
+    background-color: var(--income-color);
+}
+
+.progress-bar-danger {
+    background-color: var(--expense-color);
+}
+
+.progress-bar-warning {
+    background-color: var(--warning-color);
+}
+
+/* Text Colors */
+.text-income {
+    color: var(--income-color);
+}
+
+.text-expense {
+    color: var(--expense-color);
+}
+
+/* Icons */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 24px;
+    color: white;
+}
+
+.icon-income {
+    background-color: var(--income-color);
+}
+
+.icon-expense {
+    background-color: var(--expense-color);
+}
+
+.icon-balance {
+    background-color: var(--primary-color);
+}
+
+/* Forms */
+.form-label {
+    font-weight: 500;
+}
+
+.required:after {
+    content: " *";
+    color: var(--expense-color);
+}
+
+/* Tables */
+.table thead {
+    background-color: #f8f9fa;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Transaction Type Badges */
+.badge-income {
+    background-color: var(--income-color);
+    color: white;
+}
+
+.badge-expense {
+    background-color: var(--expense-color);
+    color: white;
+}
+
+/* Budget Progress */
+.budget-progress-bar {
+    height: 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.budget-safe {
+    background-color: var(--income-color);
+}
+
+.budget-warning {
+    background-color: var(--warning-color);
+}
+
+.budget-danger {
+    background-color: var(--expense-color);
+}
+
+/* Goals */
+.goal-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.goal-progress {
+    height: 8px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+}
+
+/* Reports */
+.report-card {
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .card-deck {
+        display: block;
+    }
+    
+    .card-deck .card {
+        margin-bottom: 15px;
+    }
+}
+
+/* Add these styles to your CSS */
+.bg-light-success {
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+.bg-light-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+}
+
+#category_search.selected {
+    font-weight: 500;
+}
